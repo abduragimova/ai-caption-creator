@@ -11,7 +11,8 @@
 - Challenges and Edge Cases  
 - How to Run the Project  
 - Environment Variables  
-- Sample Files  
+- Sample Files
+- Demo
 - Deployment Notes  
 
 ---
