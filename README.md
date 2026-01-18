@@ -101,6 +101,31 @@ The repository includes sample product images and text briefs that can be used t
 
 ---
 
+## Demo
+The following images show the workflow of the AI Social Media Caption Creator:
+
+**1. Main Page – Upload or Enter Brief**  
+The user can upload a product image or write a brief description to generate captions, hashtags, and suggested posting time.  
+
+![Main Page](images/main.png)
+
+**2. Generated Captions – Example**  
+After submitting an image or brief, the AI generates creative captions for the product. This example shows captions generated for an AirPods image.  
+
+![Generated Captions](images/caption.png)
+
+**3. Hashtags for the Image**  
+The system also generates relevant hashtags to increase visibility on social media platforms.  
+
+![Hashtags](images/hashtags.png)
+
+**4. Suggested Best Time to Post**  
+Based on the content type, the AI provides a recommended posting time to maximize engagement.  
+
+![Best Time to Post](images/time.png)
+
+---
+
 ## Deployment Notes
 
 The application is designed to be easily deployable. The backend can be deployed on any platform that supports Python and FastAPI, while the frontend can be served as static files. The clean separation between frontend and backend allows flexible scaling and integration.
