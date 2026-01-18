@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Social Media Caption Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>✨ AI Social Media Caption Creator</h1>
+            <p class="subtitle">Generate engaging captions, hashtags, and get posting time suggestions instantly!</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-card">
+                    <h2>Choose Your Input Method</h2>
+                    
+                    <!-- Tab Navigation -->
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" data-tab="image">📸 Upload Image</button>
+                        <button class="tab-btn" data-tab="text">✍️ Text Brief</button>
+                    </div>
+
+                    <!-- Image Upload Tab -->
+                    <div class="tab-content active" id="image-tab">
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">📤</div>
+                            <h3>Upload Product Image</h3>
+                            <p>Drag and drop an image or click to browse</p>
+                            <input type="file" id="imageInput" accept="image/*" hidden>
+                            <button class="upload-btn" id="imageUploadBtn">Choose Image</button>
+                        </div>
+                        
+                        <div class="preview-container" id="imagePreview" style="display: none;">
+                            <img id="previewImg" src="" alt="Preview">
+                            <button class="remove-btn" id="removeImageBtn">✕ Remove</button>
+                        </div>
+                        
+                        <button class="generate-btn" id="generateFromImage" style="display: none;">
+                            <span id="generateImageText">🎨 Generate Captions</span>
+                            <div class="btn-spinner" id="imageSpinner" style="display: none;"></div>
+                        </button>
+                    </div>
+
+                    <!-- Text Brief Tab -->
+                    <div class="tab-content" id="text-tab">
+                        <div class="text-input-container">
+                            <label for="textBrief">Describe your product or content:</label>
+                            <textarea 
+                                id="textBrief" 
+                                placeholder="Example: Eco-friendly bamboo toothbrush with soft bristles, perfect for sustainable living..."
+                                rows="6"
+                                maxlength="1000"
+                            ></textarea>
+                            <div class="char-count">
+                                <span id="charCount">0</span> / 1000 characters
+                            </div>
+                        </div>
+                        
+                        <button class="generate-btn" id="generateFromText">
+                            <span id="generateTextText">🎨 Generate Captions</span>
+                            <div class="btn-spinner" id="textSpinner" style="display: none;"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>✨ Your Generated Content</h2>
+                    <button class="new-btn" id="newGenerationBtn">🔄 Create New</button>
+                </div>
+
+                <!-- Content Type Badge -->
+                <div class="content-type-badge" id="contentTypeBadge">
+                    <span id="contentTypeText">Product - Lifestyle</span>
+                </div>
+
+                <!-- Captions Section -->
+                <div class="captions-container">
+                    <h3>💬 Creative Captions</h3>
+                    <div id="captionsGrid" class="captions-grid">
+                        <!-- Captions will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Hashtags Section -->
+                <div class="hashtags-container">
+                    <h3>#️⃣ Hashtag Sets</h3>
+                    <div id="hashtagsGrid" class="hashtags-grid">
+                        <!-- Hashtags will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Posting Time Section -->
+                <div class="posting-time-container">
+                    <h3>⏰ Best Time to Post</h3>
+                    <div class="posting-time-card" id="postingTimeCard">
+                        <!-- Posting time will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by Google Gemini AI • Built with ❤️ for social media success</p>
+        </footer>
+    </div>
+
+    <!-- Copy Toast Notification -->
+    <div class="toast" id="toast">
+        <span id="toastMessage">Copied to clipboard!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
