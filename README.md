@@ -112,7 +112,7 @@ The user can upload a product image or write a brief description to generate cap
 **2. Generated Captions – Example**  
 After submitting an image or brief, the AI generates creative captions for the product. This example shows captions generated for an AirPods image.  
 
-![Generated Captions](images/caption.png)
+![Generated Captions](images/captions.png)
 
 **3. Hashtags for the Image**  
 The system also generates relevant hashtags to increase visibility on social media platforms.  
